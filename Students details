@@ -4,5 +4,5 @@ public class Student_Details {
  System.out.println("Name: A.Sri Surya\t\t\t Reg no:23K61A4704");
  System.out.println("Father Name: A.Veera Swamy\t\t Aadhar no: 810179736313");
  System.out.println("Occupation: Government Employee\t\t\t\tDOB:02/10/2005");
- System.out.println("Parent mob number: 98/49627392\t\t no of subjects passed: 10"); } }
+ System.out.println("Parent mob number: 9849627392\t\t no of subjects passed: 10"); } }
 
