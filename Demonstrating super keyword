@@ -1,0 +1,31 @@
+package q18039;
+import java.util.Scanner;
+class Addition {
+	int num1, num2;
+	public int add() {
+		return num1 + num2;
+	}
+}
+class Calculation extends Addition {
+	public int sub() {
+		return num1 - num2;
+	}
+	public void performCalculations() {
+		int sum = super.add();
+		System.out.println("Addition: " + sum);
+		int difference = sub();
+		System.out.println("Subtraction: " + difference);
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		Calculation calc = new Calculation();
+		calc.num1 = a;
+		calc.num2 = b;
+		calc.performCalculations();
+		scanner.close();
+	}
+}
