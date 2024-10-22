@@ -1,0 +1,17 @@
+package q22135;
+import java.io.*;
+import java.util.Scanner;
+class Main{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		StringBuffer input=new StringBuffer(sc.nextLine());
+		StringBuffer output=new StringBuffer();
+		int i=0;
+		for(i=0;i<input.length();i++){
+			char currentChar=input.charAt(i);
+			if(output.indexOf(String.valueOf(currentChar))==-1)
+				output.append(currentChar);
+		}
+		System.out.println(output);
+	}
+}
