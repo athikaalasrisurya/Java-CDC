@@ -1,0 +1,61 @@
+package q21947; 
+import java.util.Scanner; 
+class Test {
+    // Private instance variables
+    private int i;
+    private int j;
+    // Default constructor
+     Test()
+	{
+		i=0;
+		j=0;
+	}
+    // Parameterized constructor with one parameter
+     Test(int a)
+	{
+		i=a;
+		j=0;
+	}
+    
+    // Parameterized constructor with two parameters
+    Test(int a,int b)
+	{
+		i=a;
+		j=b;
+	}
+    // Display function to print the values of i and j
+
+	void display()
+	{
+		System.out.println("Value of i: "+i);
+		System.out.println("Value of j: "+j);
+	}
+
+}
+public class Main {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+		int a,b,c;
+		Scanner s = new Scanner(System.in);
+        // Default constructor for obj1
+		Test obj1= new Test();
+		System.out.println("Displaying values for obj1:");
+		obj1.display();
+        // Take input for obj2 with parameterized constructor (one parameter)
+		System.out.print("Enter a value for i: ");
+		a=s.nextInt();
+		Test obj2 = new Test(a);
+		System.out.println("Displaying values for obj2:");
+		obj2.display();
+        // Take input for obj3 with parameterized constructor (two parameters)
+		System.out.print("Enter a value for i: ");
+		b=s.nextInt();
+		System.out.print("Enter a value for j: ");
+		c=s.nextInt();
+		Test obj3 = new Test(b,c);
+		System.out.println("Displaying values for obj3:");
+		obj3.display();
+        // Close the Scanner to avoid resource leak
+        s.close();
+    }
+}
