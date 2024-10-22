@@ -1,0 +1,25 @@
+class OverloadArea
+	{
+		public static void main(String args[])
+		{
+			float a,b;
+			a=Float.parseFloat(args[0]);
+			b=Float.parseFloat(args[1]);
+			OverloadAreaDemo obj = new OverloadAreaDemo();
+			System.out.printf("Area of square for side in meters %.2f: %.4f",a,obj.area(a));
+			System.out.println();
+			System.out.printf("Area of rectangle for length and breadth in meters %.2f, %.2f: %.7f",a,b,obj.area(a,b));
+			System.out.println();
+		}
+	}
+class OverloadAreaDemo
+	{
+		float area(float s)
+		{
+			return s*s;
+		}
+		float area(float l,float b)
+		{
+			return l*b;
+		}
+	}
