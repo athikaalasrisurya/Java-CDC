@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.lang.Math;
+class QuadraticEquation
+{
+	public static void main(String args[])
+	{
+		double a,b,c,d,r,r1,r2,i;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Coefficient a: ");
+		a=sc.nextDouble();
+		System.out.print("Coefficient b: ");
+		b=sc.nextDouble();
+		System.out.print("Coefficient c: ");
+		c=sc.nextDouble();
+		d=(b*b)-(4*a*c);
+		if(d==0)
+		{
+			System.out.println("The roots are real and equal");
+			r1=r2=-b/(2*a);
+			System.out.println("Root: "+r1);
+		}
+		else if(d>0)
+		{
+			r1=(-b+Math.sqrt(d))/(2*a);
+			r2=(-b-Math.sqrt(d))/(2*a);
+			System.out.println("The roots are real and distinct");
+			System.out.print("Root1: "+r1);
+			System.out.println(" Root2: "+r2);
+		}
+		else
+		{
+			System.out.println("The roots are imaginary");
+		}
+	}
+}
